@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+
+  background-image: url("fon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: #141024;
+}
+
+.header {
+  width: 100%;
+  min-height: 100px;
+  padding: 25px 5%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: #ff6675;
+}
+
+.phone {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.phone:hover {
+  color: #ff6675;
+}
+
+.hero {
+  min-height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+
+  padding: 40px 10% 100px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: clamp(38px, 5vw, 60px);
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.hero-content p {
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.button {
+  display: inline-block;
+
+  padding: 22px 40px;
+
+  background-color: #d94b5b;
+  color: white;
+
+  text-decoration: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+
+  border-radius: 5px;
+  border: 2px solid transparent;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ff263f;
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px;
+  }
+
+  .menu {
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    justify-content: center;
+    text-align: center;
+    padding: 50px 25px;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .phone {
+    font-size: 17px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 18px 25px;
+  }
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ROBO.SCHOOL</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="modal/modal-style.css" />
   </head>
   <body>
     <div class="page">
@@ -29,47 +30,51 @@
             начальной школы
           </p>
 
-          <a href="#price" class="button"> Записаться на курс </a>
+          <button class="open-btn" id="openBtn">Записаться на курс</button>
         </div>
       </main>
     </div>
-  </body>
-</html>
 
-<!doctype html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ROBO.SCHOOL</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="page">
-      <header class="header">
-        <a href="#" class="logo">ROBO.SCHOOL </a>
+   <!-- Модальное окно с формой заявки -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <button class="modal-close" id="closeX"
+      aria-label="Закрыть">&times;</button>
 
-        <nav class="menu">
-          <a href="#about">О школе</a>
-          <a href="#trainers">Тренеры</a>
-          <a href="#price">Стоимость</a>
-        </nav>
+    <h2>Оставьте заявку</h2>
 
-        <a href="tel:+78000000000" class="phone"> +7 800 000 00 00 </a>
-      </header>
+    <p class="modal-description">
+      Заполните форму, и мы свяжемся с вами для уточнения
+      даты и времени персональной экскурсии
+    </p>
 
-      <main class="hero" id="about">
-        <div class="hero-content">
-          <h1>ROBO SCHOOL</h1>
+    <form id="applicationForm">
+      <input
+        type="text"
+        name="name"
+        placeholder="Имя"
+        required
+      />
 
-          <p>
-            Курсы повышения квалификации по робототехнике для педагогов
-            начальной школы
-          </p>
+      <input
+        type="tel"
+        name="phone"
+        placeholder="Телефон"
+        required
+      />
 
-          <a href="#price" class="button"> Записаться на курс </a>
-        </div>
-      </main>
+      <button type="submit" class="submit-btn">
+        Отправить заявку
+      </button>
+    </form>
+  </div>
+</div> <!-- Сам компонент окна -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <button class="modal-close" id="closeX" aria-label="Закрыть">
+
+      </div>
     </div>
+    <script src="modal/modal-script.js"></script>
   </body>
 </html>
